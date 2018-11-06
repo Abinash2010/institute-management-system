@@ -1,0 +1,53 @@
+body{
+			background-image: none;
+		}
+		.right{
+			background-color: white;
+			height: 100%;
+			width: 100%;
+			position: fixed;
+		}
+		.left{
+			width: 0%;
+		}
+		.login
+		{
+			width:95%;
+			margin-top: 80px;
+			padding-left: 14px;
+		}
+		.Card{
+			height: 150px;
+			width: 100%;
+			background-color: black;
+			opacity: 0.8; 
+			position: fixed;
+		}
+	.h1{
+				color: green;
+
+				font-weight: bold;
+				font-size: 43px;
+				padding:30px;
+			}
+		@media (min-width: 1000px) {
+			.h1{
+				display: none;
+			}
+  	
+		.left{
+			width: 0%;
+		}
+  		.right{
+			background-color: white;
+			height: 100%;
+			width: 32%;
+			position: fixed;
+		}	
+		.login
+		{
+			width:67%;
+			margin-top: 160px;
+		}
+  			
+		}

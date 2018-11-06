@@ -1,0 +1,140 @@
+body
+{
+	overflow-x: hidden;
+}
+.cards{
+	height: 250px;
+	width: 400px;
+	background-color: grey;
+	margin-top: 20%;
+}
+.cardss{
+	height: 300px;
+	background-color: grey;
+	margin-top: 19%;
+}
+.left{
+
+	float: left;
+	margin: 15% auto;
+	padding-left: 15px;
+}
+.right{
+	margin-top: 20px;
+	float: right;
+	padding-left: 10px;
+	padding-right: 10px;
+	left-border:1px solid white;
+}
+.left-nav{
+	float: left;
+	padding-left: 15px;
+}
+.right-nav{
+	float: right;
+	padding-right: 15px;
+
+} The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 130px;
+    margin-left: -60px;
+    margin-top: -1px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.card1{
+	height: 170px;
+	background-color: #CE93D8;
+}
+.card2{
+	height: 170px;
+	background-color:#F8BBD0;
+}
+.card3{
+	height: 170px;
+	background-color:#BBDEFB;
+}
+.card4{
+	height: 170px;
+	background-color: #C8E6C9;
+}
+.success{
+	background-color: #DCEDC8;
+	padding-top: 100px;
+}
+.dashcard{
+	padding-top: 9%;
+}
+.dashcar{
+	padding-top: 9%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+}
+a{
+	color: white;
+}
+a:hover{
+	text-decoration: none;
+	cursor: pointer;
+	color: black;
+}
+.cardtxt{
+	padding-top: 19%;
+}
+.sidebar{
+	width: 18%;
+	height: 100%;
+	background-color:#7C4DFF;
+	position: absolute;
+	margin-top: -20px;
+}
+.containers{
+	margin-top: 1%;
+	margin-left: 19%;
+}
+.forms{
+	color: black;
+	
+}
+.rounddept{
+	height: 100px;
+	width:150px;
+	background-color:lightgreen;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+.card10{
+	height: 150px;
+	background-color:#F8BBD0;
+}
+.Attendence{
+	width: 8px;
+}

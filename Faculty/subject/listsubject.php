@@ -1,0 +1,83 @@
+<?php
+
+ session_start();
+    include '../../connection.php';
+   
+
+  $temp=$_SESSION['uid'];
+ if(!isset($temp))
+      {
+              header('location:../../Faculty.php');
+       }
+  else
+    {
+  
+    	$cls=$_GET['class'];
+      $id=$_GET['dept'];
+$db=getDB();
+
+
+$sql1=$db->prepare("SELECT * FROM `Subject` where Class_Code=:cls ");
+$sql1->bindParam(':cls',$cls,PDO::PARAM_STR);
+$sql1->execute();
+$data=$sql1->fetchAll(PDO::FETCH_ASSOC);
+?>
+<!DOCTYPE html>
+<html>
+<?php include 'head.php' ;?>
+
+<body>
+  <section id="container">
+
+<?php include 'nav-header.php';
+ ?>
+ <?php include 'nav_sidebar.php' ; ?>
+ <section id="main-content">
+ <div style="padding-top: 100px;">
+ 
+ 
+ 		<table class="table table-bordered-primary">
+      <tr>
+       
+        <th>Subject</th>
+        <th>Semester</th>
+       
+      
+      </tr>
+      <?php foreach($data as $row)
+      {
+        $stmt=$db->prepare('SELECT * FROM `Class` where Class_Code=:cls');
+        $stmt->bindParam(':cls',$row['Class_Code'],PDO::PARAM_STR);
+        $stmt->execute();
+        $data1=$stmt->fetch(PDO::FETCH_OBJ);
+
+       
+
+      $stmt3=$db->prepare('SELECT * FROM `Subject` where Subject_Code=:sid');
+        $stmt3->bindParam(':sid',$row['Subject_Code'],PDO::PARAM_STR);
+        $stmt3->execute();
+        $data3=$stmt3->fetch(PDO::FETCH_OBJ);
+
+
+
+      echo '<tr>
+                <td>'.$data3->Subject_name.'</td>
+                <td>'.$data1->Class_name.'</td>
+       
+               
+               
+      </tr>';
+    }
+      ?>
+      
+    </table>
+ 
+ 
+ </div>
+</section>
+</section>
+</body>
+</html>
+<?php
+}
+?>
